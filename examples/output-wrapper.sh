@@ -7,8 +7,15 @@
 ###
 
 
+if [[ "$(dirname $0)" == "." ]]; then
+    INC_DIR="../bash"
+else
+    INC_DIR="./bash"
+fi
+
+
 # Include the output wrapper
-source ./bash/output-wrapper.inc.sh
+source $INC_DIR/output-wrapper.inc.sh
 
 # Use the wrappers
 headline "Headline"
